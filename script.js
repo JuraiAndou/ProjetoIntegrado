@@ -52,6 +52,16 @@ $.get("data.json",
         
         for (let i = 0; i < list_bairro.length; i++) {
             const element = list_bairro[i];
+
+            let list_inst = "";
+            for (let j = 0; j < element.list.length; j++) {
+                list_inst += 
+                "<div class=\"local-ref\">"+
+                    "<div class=\"local-ref-title\">"+ element.list[j].nome +"</div>"+
+                    "<div class=\"local-ref-info\"></div>"+
+                    "<div class=\"local-ref-map\"></div>"+
+                "</div>";
+            }
             
             $('#bairro-list').append(
                 "<div class=\"bairro-block\">"+
@@ -62,17 +72,7 @@ $.get("data.json",
                     "</div>"+
                 
                    " <div class=\"bairro-locais-list\">"+
-                        "<div class=\"local-ref\">"+
-                            "<div class=\"local-ref-title\">Clínica Escola de Psicologia da UFC</div>"+
-                            "<div class=\"local-ref-info\"></div>"+
-                            "<div class=\"local-ref-map\"></div>"+
-                        "</div>"+
-
-                        "<div class=\"local-ref\">"+
-                           " <div class=\"local-ref-title\">Instituto Fulano de Tal</div>"+
-                           " <div class=\"local-ref-info\"></div>"+
-                            "<div class=\"local-ref-map\"></div>"+
-                        "</div>"+
+                        list_inst+
                     "</div>"+
 			    "</div>"
             );
