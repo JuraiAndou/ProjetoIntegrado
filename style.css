@@ -159,14 +159,37 @@ body {
 	top: 0;
 	z-index: 11;
 	display: none;
+	opacity:0;
+	animation-duration: 0.5s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+@keyframes openFilterTabBg {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+@keyframes closeFilterTabBg {
+	from {opacity: 1;}
+	to {opacity: 0;}
 }
 
 #filter-tab {
 	width: 276px;
 	height: 100%;
 	position:absolute;
-	right: 0;
+	right: -276px;
 	background:white;
+	animation-duration: 0.5s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+@keyframes openFilterTab {
+	from {right: -276px;}
+	to {right: 0;}
+}
+@keyframes closeFilterTab {
+	from {right: 0;}
+	to {right: -276px;}
 }
 
 #filter-tab-header {
@@ -185,6 +208,7 @@ body {
 	background-repeat: no-repeat;
 	background-size: initial;
 	background-position: center;
+	transform: rotate(270deg);
 	margin: 10px;
 	width: 34px;
 	height: 34px;
@@ -280,6 +304,7 @@ body {
 	width: 100%;
 	height: 63px;
 	border-radius: 17px;
+	transition: background-color 0.5s;
 }
 
 .bairro-icon {
@@ -300,6 +325,7 @@ body {
 	color: black;
 	margin-top: 20px;
 	font-family: "Roboto-Bold";
+	transition: color 0.5s;
 }
 
 .bairro-arrow-button {
