@@ -49,5 +49,34 @@ $.get("data.json",
                 list_bairro.push({bairro : inst[i].bairro, list : [inst[i]]});
             }
         }
+        
+        for (let i = 0; i < list_bairro.length; i++) {
+            const element = list_bairro[i];
+            
+            $('#bairro-list').append(
+                "<div class=\"bairro-block\">"+
+                    "<div class=\"bairro-header\" open=\"false\">"+
+                        "<div class=\"bairro-icon\"></div>"+
+                        "<div class=\"bairro-title\">"+ element.bairro +"</div>"+
+                        "<div class=\"bairro-arrow-button\"></div>"+
+                    "</div>"+
+                
+                   " <div class=\"bairro-locais-list\">"+
+                        "<div class=\"local-ref\">"+
+                            "<div class=\"local-ref-title\">Clínica Escola de Psicologia da UFC</div>"+
+                            "<div class=\"local-ref-info\"></div>"+
+                            "<div class=\"local-ref-map\"></div>"+
+                        "</div>"+
+
+                        "<div class=\"local-ref\">"+
+                           " <div class=\"local-ref-title\">Instituto Fulano de Tal</div>"+
+                           " <div class=\"local-ref-info\"></div>"+
+                            "<div class=\"local-ref-map\"></div>"+
+                        "</div>"+
+                    "</div>"+
+			    "</div>"
+            );
+        }
     }
 );
+
