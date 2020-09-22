@@ -65,7 +65,7 @@ $.get("data.json",
             
             $('#bairro-list').append(
                 "<div class=\"bairro-block\">"+
-                    "<div class=\"bairro-header\" open=\"false\">"+
+                    "<div class=\"bairro-header\">"+
                         "<div class=\"bairro-icon\"></div>"+
                         "<div class=\"bairro-title\">"+ element.bairro +"</div>"+
                         "<div class=\"bairro-arrow-button\"></div>"+
@@ -76,8 +76,83 @@ $.get("data.json",
                     "</div>"+
 			    "</div>"
             );
-            AddClickEvent();
+            
         }
+        AddClickEvent();
     }
 );
 
+function AddClickEvent() {
+    $(".bairro-header").each(function(){
+        $(this).on("click", toggleBairroList);
+    });
+
+    $(".local-ref-info").each(function(){
+        $(this).on("click", openLocalInfo);
+    });
+    
+    $("#close-local-block").on("click", closeLocalInfo);
+
+    $("#filter-button").on("click", openFilterTab);
+    $("#close-filter-tab").on("click", closeFilterTab);
+}
+
+function toggleBairroList(){
+    if ($(this).hasClass("bairro-header-selected") == false) {
+        var oldOpenBairro = $(".bairro-header-selected");
+        oldOpenBairro.attr("open", "false");
+        oldOpenBairro.next(".bairro-locais-list").css("display", "none");
+        oldOpenBairro.removeClass("bairro-header-selected");
+
+        $(this).attr("open", "true");
+        $(this).addClass("bairro-header-selected");
+    
+        var list = $(this).next(".bairro-locais-list"); 
+        list.css("display", "flex");
+    }
+    else {
+        $(this).attr("open", "false");
+        $(this).removeClass("bairro-header-selected");
+    
+        var list = $(this).next(".bairro-locais-list"); 
+        list.css("display", "none");
+    }
+}
+
+// Open Filter Tab
+function openFilterTab() {
+    var filterTabBg = $("#filter-tab-bg")
+    var filterTab = $("#filter-tab");
+
+    filterTabBg.css("display", "block");
+    filterTabBg.css("animation-name", "showBg");
+    filterTab.css("animation-name", "openFilterTab");
+};
+
+// Close Filter Tab
+function closeFilterTab() {
+    var filterTabBg = $("#filter-tab-bg")
+    var filterTab = $("#filter-tab");
+    
+    filterTabBg.css("animation-name", "hideBg");
+    filterTab.css("animation-name", "closeFilterTab");
+    setTimeout(function(){ filterTabBg.css("display", "none"); }, 500);
+};
+
+function openLocalInfo() {
+    var localInfoBg = $("#local-block-bg")
+    var localInfo = $("#local-block");
+
+    localInfoBg.css("display", "block") ;
+    localInfoBg.css("animation-name","showBg") ;
+    localInfo.css("animation-name","openLocalInfo");
+}
+
+function closeLocalInfo() {
+    var localInfoBg = $("#local-block-bg")
+    var localInfo = $("#local-block");
+
+    localInfoBg.css("animation-name","hideBg") ;
+    localInfo.css("animation-name","closeLocalInfo");
+    setTimeout(function(){ localInfoBg.css("display", "none"); }, 500);
+}

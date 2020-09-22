@@ -5,6 +5,16 @@
     
         var list = this.parentNode.getElementsByTagName('div')[4]; 
         list.style.display = "flex";
+
+        for (var i = 0; i < document.getElementsByClassName("bairro-header").length; i++) {
+            if (document.getElementsByClassName("bairro-header")[i] != this && document.getElementsByClassName("bairro-header")[i].classList.contains("bairro-header-selected")) {
+                document.getElementsByClassName("bairro-header")[i].setAttribute("open", "false");
+                document.getElementsByClassName("bairro-header")[i].classList.remove("bairro-header-selected");
+                
+                var prevList = document.getElementsByClassName("bairro-header")[i].parentNode.getElementsByTagName('div')[4]; 
+                prevList.style.display = "none";
+            }
+        }
     }
     else {
         this.setAttribute("open", "false");
@@ -64,5 +74,3 @@ function AddClickEvent() {
 
     document.getElementById("close-local-block").addEventListener("click", closeLocalInfo);
 }
-
-window.onLoad = AddClickEvent();
