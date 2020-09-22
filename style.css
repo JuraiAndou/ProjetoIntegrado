@@ -1,3 +1,4 @@
+/* Fontes ------------------------------------------------------------------------------- */
 @font-face {
 	font-family: "Roboto";
 	src: url("assets/fonts/Roboto-Regular.ttf");
@@ -13,6 +14,37 @@
 	src: url("assets/fonts/Roboto-Medium.ttf");
 	weight: "bold";
 }
+
+/* Animações ------------------------------------------------------------------------------- */
+
+@keyframes showBg {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+@keyframes hideBg {
+	from {opacity: 1;}
+	to {opacity: 0;}
+}
+
+@keyframes openFilterTab {
+	from {right: -276px;}
+	to {right: 0;}
+}
+@keyframes closeFilterTab {
+	from {right: 0;}
+	to {right: -276px;}
+}
+
+@keyframes openLocalInfo {
+	from {bottom: -100%;}
+	to {bottom: 0;}
+}
+@keyframes closeLocalInfo {
+	from {bottom: 0;}
+	to {bottom: -100%;}
+}
+
+/* Geral ------------------------------------------------------------------------------- */
 
 body {
 	margin: 0;
@@ -164,14 +196,6 @@ body {
 	animation-iteration-count: 1;
 	animation-fill-mode: forwards;
 }
-@keyframes openFilterTabBg {
-	from {opacity: 0;}
-	to {opacity: 1;}
-}
-@keyframes closeFilterTabBg {
-	from {opacity: 1;}
-	to {opacity: 0;}
-}
 
 #filter-tab {
 	width: 276px;
@@ -182,14 +206,6 @@ body {
 	animation-duration: 0.5s;
 	animation-iteration-count: 1;
 	animation-fill-mode: forwards;
-}
-@keyframes openFilterTab {
-	from {right: -276px;}
-	to {right: 0;}
-}
-@keyframes closeFilterTab {
-	from {right: 0;}
-	to {right: -276px;}
 }
 
 #filter-tab-header {
@@ -412,6 +428,10 @@ body {
 	bottom: 0;
 	background-color: rgba(0,0,0,0.5);
 	z-index: 11;
+	opacity:0;
+	animation-duration: 0.5s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
 }
 
 #local-block {
@@ -419,10 +439,14 @@ body {
 	margin: 0 5%;
 	max-height: 90%;
 	position: absolute;
-	bottom: 0;
+	bottom: -100%;
 	border-radius: 29px 29px 0px 0px;
 	overflow-x: hidden;
 	overflow-y: auto;
+	z-index: 12;
+	animation-duration: 0.5s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
 }
 
 #local-header {
