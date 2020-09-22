@@ -72,10 +72,11 @@ $.get("data.json",
                     "</div>"+
                 
                    " <div class=\"bairro-locais-list\">"+
-                        list_inst+
+                   list_inst+
                     "</div>"+
 			    "</div>"
             );
+            AddClickEvent();
         }
     }
 );
