@@ -8,6 +8,11 @@
 	src: url("assets/fonts/Roboto-Bold.ttf");
 	weight: "bold";
 }
+@font-face {
+	font-family: "Roboto-Medium";
+	src: url("assets/fonts/Roboto-Medium.ttf");
+	weight: "bold";
+}
 
 body {
 	margin: 0;
@@ -15,8 +20,9 @@ body {
 	font-family: "Roboto";
 }
 
+/* Tab Header -------------------------------------------------------------------------- */
 .tab-header {
-	display: block;
+	display: flex;
     background-color: #54CBCF;
     width: 100%;
     height: 39px;
@@ -27,7 +33,7 @@ body {
 }
 
 .tab-header-title {
-	display:block;
+	display: inline-block;
 	position:relative;
 	top: 17px;
 	margin: 0 auto;
@@ -49,6 +55,129 @@ body {
 	width:160px;
 }
 
+/* Filter Tab -------------------------------------------------------------------------- */
+
+#filter-button {
+	background-color: #FFD951;
+	background-image: url("assets/icons/filter.png");
+	background-repeat: no-repeat;
+	background-size: 50%;
+	background-position: center;
+	position: absolute;
+	right: 26px;
+	margin-top: 19px;
+	height: 39px;
+	width: 39px;
+	border: 2px solid #FFFFFF;
+	border-radius: 20px;
+}
+
+#filter-tab-bg {
+	position: fixed;
+	height:100%;
+	width: 100%;
+	background: rgba(0,0,0,0.5);
+	top: 0;
+	z-index: 11;
+	display: none;
+}
+
+#filter-tab {
+	width: 276px;
+	height: 100%;
+	position:absolute;
+	right: 0;
+	background:white;
+}
+
+#filter-tab-header {
+	position: fixed;
+	display: flex;
+	justify-content: space-between;
+	top: 0;
+	width: 276px;
+	height: 54px;
+	background: #54CBCF;
+	border-radius: 0px 0px 0px 27px;
+}
+
+#close-filter-tab {
+	background-image: url("assets/icons/white_arrow.png");
+	background-repeat: no-repeat;
+	background-size: initial;
+	background-position: center;
+	margin: 10px;
+	width: 34px;
+	height: 34px;
+}
+
+#filter-tab-header p {
+	font-family: "Roboto-Medium";
+	font-size: 24px;
+	color: white;
+	margin: 12px 24px;
+}
+
+#filters-list {
+	width: 276px;
+	right: 0;
+	margin-top: 70px;
+	padding-bottom: 20px;
+} 
+
+.filters {
+	width: 236px;
+    position: relative;
+    margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.filters-title {
+	font-size: 22px;
+	color: #262626;
+	font-family: "Roboto-Medium";
+	text-align: right;
+	width: 100%;
+	height: 32px;
+	border-bottom: 1px solid #8d8d8d;
+	margin-top: 15px;
+    margin-bottom: 5px;
+	padding-right: 20px;
+}
+
+.filter-option {
+	text-align: right;
+	width: 70%;
+	margin: 5px 2px;
+}
+.filter-toggle {
+	height: 15px;
+	width: 28px;
+	background: #C4C4C4;
+	border-radius: 10px;
+	margin: 7px 5px;
+}
+.filter-toggle-icon {
+    width: 11px;
+    height: 11px;
+    background: white;
+    border-radius: 5px;
+    position: relative;
+    margin-top: 2px;
+    margin-left: 14px;
+}
+
+.filter-toogle-active {
+	background-color: #54CBCF;
+}
+.filter-toogle-active .filter-toogle-icon {
+	margin-left: 3px;
+}
+
+/* Lista de Bairros -------------------------------------------------------------------------- */
+
 #bairro-list {
 	margin-top: 95px;
 	width: 100%;
@@ -57,10 +186,11 @@ body {
 	justify-content: center;
 	height: 100%;
 	overflow-y: auto;
+	padding-bottom: 70px;
 }
 
 .bairro-block {
-	width: 90%;
+	width: 86%;
 	border-radius: 17px;
 	margin-bottom: 20px;
 	box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.5);
@@ -168,6 +298,7 @@ body {
 	margin-top: 10px;
 }
 
+/* Nav Bar -------------------------------------------------------------------------- */
 #nav-bar {
 	position: fixed;
 	bottom: 0;
@@ -216,7 +347,31 @@ body {
 }
 
 #tab-ajuda {
-	background-image: url("assets/icons/on_map.png");
+	background-image: url("assets/icons/ajuda_icon.png");
+	background-repeat: no-repeat;
+	background-size: initial;
+	background-position: center;
+}
+#tab-map {
+	background-image: url("assets/icons/location.png");
+	background-repeat: no-repeat;
+	background-size: 45%;
+	background-position: center;
+}
+#tab-home {
+	background-image: url("assets/icons/home_icon.png");
+	background-repeat: no-repeat;
+	background-size: initial;
+	background-position: center;
+}
+#tab-plantao {
+	background-image: url("assets/icons/plantao_icon.png");
+	background-repeat: no-repeat;
+	background-size: initial;
+	background-position: center;
+}
+#tab-info {
+	background-image: url("assets/icons/info_icon.png");
 	background-repeat: no-repeat;
 	background-size: initial;
 	background-position: center;

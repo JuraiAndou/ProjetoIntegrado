@@ -7,89 +7,127 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-	<div class="tab-header">
-		<div class="tab-header-title">
-			<p>INSTITUIÇÕES</p>
-		</div>
-	</div>
-
-	<div id="bairro-list">
-		<div class="bairro-block">
-			<div class="bairro-header bairro-header-selected">
-				<div class="bairro-icon"></div>
-				<div class="bairro-title">BENFICA</div>
-				<div class="bairro-arrow-button"></div>
+	
+	<div id="home">
+		<div class="tab-header">
+			<div class="tab-header-title">
+				<p>INSTITUIÇÕES</p>
 			</div>
-			
-			<div class="bairro-locais-list" style="display: flex">
-				<div class="local-ref">
-					<div class="local-ref-title">Clínica Escola de Psicologia da UFC</div>
-					<div class="local-ref-info"></div>
-					<div class="local-ref-map"></div>
+
+			<div id="filter-button"></div>
+		</div>
+
+		<div id="filter-tab-bg">
+			<div id="filter-tab">
+				<div id="filter-tab-header">
+					<div id="close-filter-tab"></div>
+					<p>Filtrar por</p>
 				</div>
 
-				<div class="local-ref">
-					<div class="local-ref-title">Instituto Fulano de Tal</div>
-					<div class="local-ref-info"></div>
-					<div class="local-ref-map"></div>
+				<div id="filters-list">
+					<div class="filters">
+						<p class="filters-title">Atendimento</p>
+						<div class="filter-option">Online</div><div class="filter-toggle"><div class="filter-toggle-icon"></div></div>
+						<div class="filter-option">Pessoalmente</div><div class="filter-toggle"><div class="filter-toggle-icon"></div></div>
+						<div class="filter-option">Ambos</div><div class="filter-toggle"><div class="filter-toggle-icon"></div></div>
+					</div>
+
+					<div class="filters">
+						<p class="filters-title">Preço</p>
+						<div class="filter-option">Grátis</div><div class="filter-toggle"><div class="filter-toggle-icon"></div></div>
+						<div class="filter-option">Social</div><div class="filter-toggle"><div class="filter-toggle-icon"></div></div>
+						<div class="filter-option">Comum</div><div class="filter-toggle"><div class="filter-toggle-icon"></div></div>
+						<div class="filter-option">Todos</div><div class="filter-toggle"><div class="filter-toggle-icon"></div></div>
+					</div>
+
+					<div class="filters">
+						<p class="filters-title">Funcionamento</p>
+						<div class="filter-option">Manhã</div><div class="filter-toggle"><div class="filter-toggle-icon"></div></div>
+						<div class="filter-option">Tarde</div><div class="filter-toggle"><div class="filter-toggle-icon"></div></div>
+						<div class="filter-option">Noite</div><div class="filter-toggle"><div class="filter-toggle-icon"></div></div>
+						<div class="filter-option">Todos</div><div class="filter-toggle"><div class="filter-toggle-icon"></div></div>
+					</div>
 				</div>
 			</div>
 		</div>
 
-		<div class="bairro-block">
-			<div class="bairro-header">
-				<div class="bairro-icon"></div>
-				<div class="bairro-title">BARRA DO CEARÁ</div>
-				<div class="bairro-arrow-button"></div>
-			</div>
+		<div id="bairro-list">
+			<div class="bairro-block">
+				<div class="bairro-header bairro-header-selected">
+					<div class="bairro-icon"></div>
+					<div class="bairro-title">BENFICA</div>
+					<div class="bairro-arrow-button"></div>
+				</div>
 			
-			<div class="bairro-locais-list">
-			</div>
-		</div>
+				<div class="bairro-locais-list" style="display: flex">
+					<div class="local-ref">
+						<div class="local-ref-title">Clínica Escola de Psicologia da UFC</div>
+						<div class="local-ref-info"></div>
+						<div class="local-ref-map"></div>
+					</div>
 
-		<div class="bairro-block">
-			<div class="bairro-header">
-				<div class="bairro-icon"></div>
-				<div class="bairro-title">BOM JARDIM</div>
-				<div class="bairro-arrow-button"></div>
+					<div class="local-ref">
+						<div class="local-ref-title">Instituto Fulano de Tal</div>
+						<div class="local-ref-info"></div>
+						<div class="local-ref-map"></div>
+					</div>
+				</div>
 			</div>
-			
-			<div class="bairro-locais-list">
-			</div>
-		</div>
 
-		<div class="bairro-block">
-			<div class="bairro-header">
-				<div class="bairro-icon"></div>
-				<div class="bairro-title">BAIRRO DE FÁTIMA</div>
-				<div class="bairro-arrow-button"></div>
-			</div>
+			<div class="bairro-block">
+				<div class="bairro-header">
+					<div class="bairro-icon"></div>
+					<div class="bairro-title">BARRA DO CEARÁ</div>
+					<div class="bairro-arrow-button"></div>
+				</div>
 			
-			<div class="bairro-locais-list">
+				<div class="bairro-locais-list">
+				</div>
 			</div>
-		</div>
-		<div class="bairro-block">
-			<div class="bairro-header">
-				<div class="bairro-icon"></div>
-				<div class="bairro-title">CENTRO</div>
-				<div class="bairro-arrow-button"></div>
-			</div>
+
+			<div class="bairro-block">
+				<div class="bairro-header">
+					<div class="bairro-icon"></div>
+					<div class="bairro-title">BOM JARDIM</div>
+					<div class="bairro-arrow-button"></div>
+				</div>
 			
-			<div class="bairro-locais-list">
+				<div class="bairro-locais-list">
+				</div>
 			</div>
-		</div>
-		<div class="bairro-block">
-			<div class="bairro-header">
-				<div class="bairro-icon"></div>
-				<div class="bairro-title">CENTRO</div>
-				<div class="bairro-arrow-button"></div>
-			</div>
+
+			<div class="bairro-block">
+				<div class="bairro-header">
+					<div class="bairro-icon"></div>
+					<div class="bairro-title">BAIRRO DE FÁTIMA</div>
+					<div class="bairro-arrow-button"></div>
+				</div>
 			
-			<div class="bairro-locais-list">
+				<div class="bairro-locais-list">
+				</div>
+			</div>
+			<div class="bairro-block">
+				<div class="bairro-header">
+					<div class="bairro-icon"></div>
+					<div class="bairro-title">CENTRO</div>
+					<div class="bairro-arrow-button"></div>
+				</div>
+			
+				<div class="bairro-locais-list">
+				</div>
+			</div>
+			<div class="bairro-block">
+				<div class="bairro-header">
+					<div class="bairro-icon"></div>
+					<div class="bairro-title">CENTRO</div>
+					<div class="bairro-arrow-button"></div>
+				</div>
+			
+				<div class="bairro-locais-list">
+				</div>
 			</div>
 		</div>
 	</div>
-
 	<div id="nav-bar">
 		<div class="tab-icon" id="tab-ajuda"><div class="tab-open-border"></div></div>
 		<div class="tab-icon" id="tab-map"><div class="tab-open-border"></div></div>
