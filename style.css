@@ -342,6 +342,7 @@ body {
 	margin-top: 20px;
 	font-family: "Roboto-Bold";
 	transition: color 0.5s;
+	text-transform: uppercase;
 }
 
 .bairro-arrow-button {
@@ -484,13 +485,14 @@ body {
 	background-color: white;
 	width: 100%;
 	margin-top: 55px;
+	padding-top: 20px;
 	padding-bottom: 20px;
 	z-index: 12;
 }
 
 #local-tags {
 	height: 23px;
-	padding: 20px 5px 0px;
+	padding: 0px 5px;
 	width: 100%;
 	overflow-x: auto;
 	display: flex;
@@ -531,9 +533,10 @@ body {
 
 #local-buttons {
 	width: 100%;
-	margin: 10px 0 0;
+	padding-bottom: 10px;
 	display: flex;
 	justify-content: center;
+	background: white;
 }
 
 #local-map-button {

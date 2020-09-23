@@ -1,4 +1,4 @@
-var inst = [];
+﻿var inst = [];
 var list_bairro = []
 $.get("data.json",
     function (data) {
@@ -156,6 +156,13 @@ function separaInfo(nm) {
         
         if(nm == element.nome){
             console.log(element);
+            
+            $("#local-title").html(element.nome);
+
+            var localContent = "";
+            localContent += "<div><div class=\"local-info-title\">Horário</div><div class=\"local-info-desc\">" + element.horario + "</div></div>";
+            
+            $("#local-content").html(localContent);
         }
     }
 }
