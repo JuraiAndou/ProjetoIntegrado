@@ -58,7 +58,7 @@ $.get("data.json",
                 list_inst += 
                 "<div class=\"local-ref\">"+
                     "<div class=\"local-ref-title\">"+ element.list[j].nome +"</div>"+
-                    "<div class=\"local-ref-info\"></div>"+
+                    "<div class=\"local-ref-info\" name=\""+element.list[j].nome+"\"></div>"+
                     "<div class=\"local-ref-map\"></div>"+
                 "</div>";
             }
@@ -139,13 +139,25 @@ function closeFilterTab() {
     setTimeout(function(){ filterTabBg.css("display", "none"); }, 500);
 };
 
-function openLocalInfo() {
+function openLocalInfo(elem) {
+    console.log($(elem.target).attr('name'));
+    separaInfo($(elem.target).attr('name'))
     var localInfoBg = $("#local-block-bg")
     var localInfo = $("#local-block");
 
     localInfoBg.css("display", "block") ;
     localInfoBg.css("animation-name","showBg") ;
     localInfo.css("animation-name","openLocalInfo");
+}
+
+function separaInfo(nm) {
+    for (let i = 0; i < inst.length; i++) {
+        const element = inst[i];
+        
+        if(nm == element.nome){
+            console.log(element);
+        }
+    }
 }
 
 function closeLocalInfo() {
