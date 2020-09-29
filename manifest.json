@@ -1,0 +1,20 @@
+{
+    "name" : "projetoV2",
+    "short_name" : "proj",
+    "start_url": ".",
+    "background_color" : "#ffffff",
+    "theme_color" : "#ffff00",
+    "display" : "standalone",
+    "icons" : [
+        {
+            "src" :"assets/icons/icon-192.png",
+            "sizes" : "192x192",
+            "type" : "image/png"
+        },
+        {
+            "src" :"assets/icons/theme.png",
+            "sizes" : "512x512",
+            "type" : "image/png"
+        }
+    ]
+}
