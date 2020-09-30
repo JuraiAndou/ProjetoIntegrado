@@ -87,6 +87,10 @@ function AddClickEvent() {
         $(this).on("click", toggleBairroList);
     });
 
+    $(".ajuda-header").each(function () {
+        $(this).on("click", toggleAjudaList);
+    });
+
     $(".local-ref-info").each(function(){
         $(this).on("click", openLocalInfo);
     });
@@ -115,6 +119,28 @@ function toggleBairroList(){
         $(this).removeClass("bairro-header-selected");
     
         var list = $(this).next(".bairro-locais-list"); 
+        list.css("display", "none");
+    }
+}
+
+function toggleAjudaList() {
+    if ($(this).hasClass("ajuda-header-selected") == false) {
+        var oldOpenBairro = $(".ajuda-header-selected");
+        oldOpenBairro.attr("open", "false");
+        oldOpenBairro.next(".ajuda-dicas-list").css("display", "none");
+        oldOpenBairro.removeClass("ajuda-header-selected");
+
+        $(this).attr("open", "true");
+        $(this).addClass("ajuda-header-selected");
+    
+        var list = $(this).next(".ajuda-dicas-list"); 
+        list.css("display", "flex");
+    }
+    else {
+        $(this).attr("open", "false");
+        $(this).removeClass("ajuda-header-selected");
+    
+        var list = $(this).next(".ajuda-dicas-list"); 
         list.css("display", "none");
     }
 }
