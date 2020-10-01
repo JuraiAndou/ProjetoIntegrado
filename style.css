@@ -640,3 +640,26 @@ body {
 	flex-wrap: wrap;
 	justify-content: center;
 }
+
+/* aba mapa */
+
+.map-container{
+	position: relative;
+	overflow: hidden;
+	padding-top: 177.77%;
+}
+.map{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 90%;
+	border: 0;
+}
+#map-body{
+	background-color: #e1d3c2;
+}
+
+.nJjxad-bMcfAe-haAclf {
+	display: none;
+}
