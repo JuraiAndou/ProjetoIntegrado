@@ -186,9 +186,37 @@ function separaInfo(nm) {
             $("#local-title").html(element.nome);
 
             var localContent = "";
-            localContent += "<div><div class=\"local-info-title\">Horário</div><div class=\"local-info-desc\">" + element.horario + "</div></div>";
+
+            if (element.hasOwnProperty('horario'))
+                localContent += "<div><div class=\"local-info-title\">Horário</div><div class=\"local-info-desc\">" + element.horario + "</div></div>";
+
+            if (element.hasOwnProperty('numero'))
+            {
+                var ddd = element.numero.substring(0,2);
+                var numeroStart = "";
+                var numeroEnd = "";
+                
+                /* Número móvel */
+                if (element.numero.length == 11) {
+                    numeroStart = element.numero.substring(2, 7);
+                    numeroEnd = element.numero.substring(7);
+                }
+                /* Número fixo */
+                else if (element.numero.length == 10) {
+                    numeroStart = element.numero.substring(2, 6);
+                    numeroEnd = element.numero.substring(6);
+                }
+
+                localContent += "<div><div class=\"local-info-title\">Número</div><div class=\"local-info-desc\">(" + ddd + ") " + numeroStart + "-" + numeroEnd + "</div></div>";
+
+                $("#local-number").attr("href", "tel:" + element.numero);
+            }
+
+            if (element.hasOwnProperty('endereco'))
+                localContent += "<div><div class=\"local-info-title\">Endereço</div><div class=\"local-info-desc\">" + element.endereco + "</div></div>";
             
             $("#local-content").html(localContent);
+
         }
     }
 }
