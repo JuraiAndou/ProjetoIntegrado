@@ -382,7 +382,7 @@ body {
 }
 
 .local-ref {
-	height: 60px;
+	min-height: 60px;
 	width: 92%;
 	border-bottom: 2px solid #54CBCF;
 	padding: 0 1.5%;
@@ -640,9 +640,28 @@ body {
 	display: none;
     word-break: break-word;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: left;
     padding: 10px 20px 20px;
-    text-align: justify;
+	font-size: 14px;
+}
+.ajuda-dicas-list p {
+	margin-block-start: 0;
+    margin-block-end: 0;
+	display: inline-block;
+	margin-bottom: 5px;
+}
+.ajuda-dicas-list div {
+	width: 50%;
+}
+.ajuda-dicas-list div p {
+	width: 75%;
+	vertical-align: middle;
+    margin-bottom: 8px;
+}
+.ajuda-dicas-list div img {
+	margin-right: 10px;
+	height: 18px;
+	width: 18px;
 }
 
 /* Tela de Mapa ---------------------------------------------------------- */
@@ -705,6 +724,10 @@ body {
 	margin-block-end: .7em;
 }
 
+.plantao-header a {
+	margin-left: auto;
+}
+
 .call{
 	margin-left: auto;
 	background-image: url(assets/icons/call.png);
@@ -737,6 +760,10 @@ body {
 	display: flex;
 	align-items: center;
 	margin: 0 13px 0 11px;
+}
+
+.mapa-section a {
+	margin-left: auto;
 }
 
 .open-map{
