@@ -278,6 +278,7 @@ body {
 	background: #C4C4C4;
 	border-radius: 10px;
 	margin: 7px 5px;
+	transition: background-color 0.5s;
 }
 .filter-toggle-icon {
     width: 11px;
@@ -289,10 +290,10 @@ body {
     margin-left: 14px;
 }
 
-.filter-toogle-active {
+.filter-toggle-active {
 	background-color: #54CBCF;
 }
-.filter-toogle-active .filter-toogle-icon {
+.filter-toggle-active .filter-toggle-icon {
 	margin-left: 3px;
 }
 
@@ -504,11 +505,12 @@ body {
 }
 
 .local-tag {
-	font-family: "Roboto";
+	font-family: "Roboto-Medium";
 	font-size: 14px;
-	color: white;
-	background-color: #FFD951;
+	color: #54CBCF;
+	background-color: #FFFFFF;
 	border-radius: 12px;
+	border: 1.5px solid #54CBCF;
 	margin: 0 9px;
 	padding: 2px 8px;
 }
