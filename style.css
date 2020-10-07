@@ -1,3 +1,13 @@
+* {
+	-webkit-tap-highlight-color: transparent;
+}
+  
+button, 
+button:active, 
+button:focus {
+	outline: none;
+}
+
 /* Fontes ------------------------------------------------------------------------------- */
 @font-face {
 	font-family: "Roboto";
@@ -109,6 +119,9 @@ body {
 	background-color: #9FB3B8;
 	border-radius: 20px;
 	margin: 16px;
+}
+.tab-icon:active{
+	background-color: #348083;
 }
 .tab-icon:first-child {
 	margin-left: 32px;
@@ -411,6 +424,9 @@ body {
 	width: 28px;
 	margin: 10px 21px 0px 10px;
 }
+.local-ref-info:active{
+	background-image: url(assets/icons/more_info_pressed.png);
+}
 
 .local-ref-map {
 	background-image: url("assets/icons/on_map.png");
@@ -420,6 +436,9 @@ body {
 	height: 28px;
 	width: 28px;
 	margin-top: 10px;
+}
+.local-ref-map:active{
+	background-image: url(assets/icons/on_map_pressed.png);
 }
 
 /* Info do Local ---------------------------------------------------------- */
@@ -554,6 +573,9 @@ body {
 	margin: 2px 10px;
 	border-radius: 24px;
 }
+#local-map-button:active{
+	background-color: #BEA43E;
+}
 
 #local-number-button {
 	background-image: url("assets/icons/call_white.png");
@@ -565,6 +587,9 @@ body {
 	width: 48px;
 	margin: 2px 10px;
 	border-radius: 24px;
+}
+#local-number-button:active{
+	background-color: #BEA43E;
 }
 
 
@@ -742,6 +767,11 @@ body {
 	width: 47px;
 	border: none;
 }
+.call-container:active .call{
+	background-color: #FFD951;
+	background-image: url(assets/icons/call_pressed.png);
+}
+
 .documentacao{
 	margin: 0 24px 0 24px;
 	font-size: 18px;
@@ -784,6 +814,11 @@ body {
 	font-size: 11px;
 	line-height: 13px;
 	text-align: center;
+}
+
+.open-map-container:active .open-map{
+	background-color: #348083;
+	color: white;
 }
 
 /* info */
@@ -865,8 +900,6 @@ body {
 	font-weight: bold;
 	font-size: 36px;
 	line-height: 42px;
-	display: flex;
-	align-items: center;
 	text-align: center;
 	color: white;
 	word-wrap: break-word;
@@ -900,6 +933,14 @@ body {
 	color: #54CBCF;
 	width: 100%;
 }
+
+.link-container:active{
+	background-color: #348083;
+}
+.link-container:active .link{
+	color: white;
+}
+
 .round-btn-container{
 	display: inline-flex;
 	align-self: center;
@@ -916,10 +957,21 @@ body {
 	background-image: url(assets/icons/info_azul.png);
 }
 
+#ajuda-menu{
+	background-image: url(assets/icons/ajuda_azul.png);
+}
+
 #if{
 	margin-left: 33px;
 }
 
-#ajuda-menu{
-	background-image: url(assets/icons/ajuda_azul.png);
+.round-btn:active div{
+	background-color: #348083;
+}
+
+.round-btn:active #ajuda-menu{
+	background-image: url(assets/icons/ajuda_azul_pressed.png);
+}
+.round-btn:active #info-menu{
+	background-image: url(assets/icons/info_azul_pressed.png);
 }
